@@ -23,7 +23,7 @@ LowMC::LowMC(int BS, int KS, int M, int R) {
 }
 
 void LowMC::loadFileFull() {
-	ifstream linearFile("D:\\qwx\\desktop\\LowMC_2diff\\linearFull.txt");
+	ifstream linearFile(".\\linearFull.txt");
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < bs; j++) {
 			for (int k = 0; k < bs; k++) {
@@ -36,7 +36,7 @@ void LowMC::loadFileFull() {
 	linearFile.close();
 
 	//inverse
-	ifstream invLinearFile("D:\\qwx\\desktop\\LowMC_2diff\\inverseFull.txt");
+	ifstream invLinearFile(".\\inverseFull.txt");
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < bs; j++) {
 			for (int k = 0; k < bs; k++) {
@@ -48,7 +48,7 @@ void LowMC::loadFileFull() {
 	}
 	invLinearFile.close();
 	//constant
-	ifstream constantFile("D:\\qwx\\desktop\\LowMC_2diff\\constantFull.txt");
+	ifstream constantFile(".\\constantFull.txt");
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < bs; j++) {
 			constantFile >> constant.ma[i][j];
@@ -58,7 +58,7 @@ void LowMC::loadFileFull() {
 	constant.c = bs;
 	constantFile.close();
 	//key
-	ifstream keyFile("D:\\qwx\\desktop\\LowMC_2diff\\keyFull.txt");
+	ifstream keyFile(".\\keyFull.txt");
 	for (int i = 0; i < r + 1; i++) {
 		for (int j = 0; j < bs; j++) {
 			for (int k = 0; k < bs; k++) {
